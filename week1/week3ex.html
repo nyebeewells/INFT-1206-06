@@ -1,0 +1,252 @@
+<figure> </figure>
+<figcaption></figcaption>
+<!--
+
+ctrl u shows html on any webpage
+source tag should be used for multiple sources, else can be in attributes
+attributes of audio
+- src
+autoplay
+loop
+loop
+preload
+buffered, muted, played
+
+
+-->
+<div class="picture">
+    <figure>
+            <figcaption>
+            This is a figure caption
+            </figcaption>
+        <img src="image-01.jpg" alt="landscape 1"
+        title="landscape 1" />
+    </figure>
+</div>
+
+<figure>
+    <audio controls>
+        <source src="Track03.mp3" type="audio/mpeg" />
+        <source src="Track03.ogg" type="audio/ogg" />
+        Your browser does not support the audio tag used.
+    </audio>
+    <figcaption>Audio Caption</figcaption>
+</figure>
+
+<!--
+Attributes of <video> Element
+The <video> Element shares many
+attributes with the <audio> element but
+has its own attributes:
+▪ Height, width
+▪ poster – specifies an image to show while the
+media item is loading
+
+
+
+
+-->
+
+
+<figure>
+    <video width="320" height="240" controls>
+    <source src="movie.mp4" type="video/mp4"/>
+    <source src="movie.ogg" type="video/ogg" />
+    <source src="movie.webm“ type="video/webm" />
+    Your browser does not support the video tag / type
+    </video>
+    <figcaption>Video Caption</figcaption>
+    </figure>
+
+    <!--
+
+
+
+        use iframes tag to embed videos from other sites
+        youtube and google will generate tag for you on the share button
+
+
+    -->
+
+    <figure>
+        <figcaption>Embedding YouTube video </figcaption>
+        <iframe
+            width="560"
+            height="315" 
+            src="https://www.youtube.com/embed/s4BibernJxU?si=glROS2XkUKy15W3p" 
+            title="YouTube video player"  
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+    </figure>
+
+    <!--
+
+        for google map embed by shareing
+    -->
+
+    <figure>
+        <figcaption>Durham College location</figcaption>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5745.522731886562!2d-78.89956332301836!3d43.94361213359838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d51b902fedb973%3A0xdd6091694035e8a1!2sDurham%20College!5e0!3m2!1sen!2sca!4v1716256599252!5m2!1sen!2sca" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </figure>
+
+
+    <!--
+embedding an pdf use object or embed
+
+can caption to link elsewhere or describe the image
+
+
+    -->
+
+    <object
+        data="mypdf.pdf" type="application/pdf"
+        width="800"
+        height="1200">
+            <p>
+            You don't have a PDF plugin, but you can
+                <a href="mypdf.pdf">
+                download the PDF file.
+                </a>
+            </p>
+    </object>
+
+
+<!--
+
+2 types of images, raster and vector images
+
+in raster- shows exactly where pixel was placed and what exact colour
+Bitmap(.bmp),PNG(.png), JPEG(.jpeg) & GIF(.gif)
+
+vectors use an algorythm, given a shape and path defintions so that it can be remade everytime
+SVG(.svg)
+
+when viewed in small size raster and vector look the same, however close up raster looks blurry and vector stays as straight loine.
+vector uses more processing but less memory, raster uses less processing but more memory
+
+
+what is svg
+its an XML-based language for describing
+vector images.
+
+markup, like HTML, except that
+you've got many different elements for defining
+the shapes you want to appear in your image,
+and the effects you want to apply to those
+shapes.
+
+example of XML code
+ex1
+<svg
+version="1.1“
+baseProfile="full"
+width="300"
+height="200"
+xmlns=http://www.w3.org/2000/svg
+>
+<rect width="100%" height="100%"
+fill="black" />
+<circle cx="150" cy="100" r="90" fill="blue" />
+</svg> 
+ex2
+<img
+src="equilateral.svg"
+alt="triangle with all three sides equal"
+height="87"
+width="100" />
+
+
+responsive images.
+- images that work well on a mix of screens sizes and resolutions.
+- issues when try to view on narrow screen
+
+solution to details being lost on smaller screens is to prepare 
+smaller, cropped images for different sized screens
+
+►A small raster image starts to look grainy when
+displayed larger than its original size.
+►Solution: multiple resolutions would be made
+available to the user's web browser. The
+browser could then determine the optimal
+resolution to load based on the screen size of
+the user's device. 
+
+Responsive image technologies were
+implemented recently to solve the problems
+indicated above by letting you offer the browser
+several image files, either all showing the same
+thing but containing different numbers of pixels
+(resolution switching), or different images
+suitable for different space allocations (art
+direction).
+
+-->
+
+<img
+srcset="elva-fairy-480w.jpg 480w, elva-fairy-800w.jpg 800w"
+sizes="(max-width: 600px) 480px,
+800px"
+src="elva-fairy-800w.jpg"
+alt="Elva dressed as a fairy" />
+
+<!--
+
+► srcset defines the set of images we will allow the browser to choose
+between, and what size each image is.
+► sizes defines a set of media conditions (e.g. screen widths) and
+indicates what image size would be best to choose, when certain
+media conditions are true
+► Media condition ((max-width:600px)): describes a possible state that the
+screen can be in i.e when the viewport width is 600 pixels or less
+
+for old browsers allow to use original image regardless w/ <src></src>
+-->
+
+<img
+srcset="elva-fairy-320w.jpg, elva-fairy-
+480w.jpg 1.5x, elva-fairy-640w.jpg 2x"
+src="elva-fairy-640w.jpg"
+alt="Elva dressed as a fairy" />
+
+<!--
+You can allow the browser to choose an
+appropriate resolution image by
+using srcset with x-descriptors and without sizes
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Art direction problem involves wanting to
+change the image displayed to suit different
+image display sizes
+
+<picture>
+    <source media= hhhh.png>
+</picture>
+
+-->
+
+<picture>
+    <source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg" />
+    <source media="(min-width: 800px)" srcset="elva-800w.jpg" />
+    <img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva" />
+    </picture>
+
+
+<!--
+Audio Formats
+- .mp3
+- .ogg
+
+Video Formats
+- .mp4
+- .webm
+
+
+
+
+-->

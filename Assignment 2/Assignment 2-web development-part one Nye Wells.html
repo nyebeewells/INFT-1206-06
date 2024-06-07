@@ -24,6 +24,21 @@ Date: May 27 2024
         </figure>
     </div>
 </header> -->
+<!--
+<picture>
+          <source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg">
+          <source media="(min-width: 800px)" srcset="elva-800w.jpg">
+          <img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva">
+        </picture>
+
+
+        <img srcset="elva-fairy-480w.jpg 480w,
+                     elva-fairy-800w.jpg 800w"
+             sizes="(max-width: 600px) 480px,
+                    800px"
+             src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy">
+
+-->
 
 <!--
     <iframe width="560" height="315" src="https://www.youtube.com/embed/ojcNcvb1olg?si=66r_YgGLDhKDaiRZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -134,7 +149,7 @@ Date: May 27 2024
           version of the Firefox logo -->
           <div class="picture">
             <figure>
-            <img src="firefox_logo-only_RGB.120px.png"/>
+            <img src="index/firefox_logo-only_RGB.120px.png"/>
             </figure>
         </div>
     </header>
@@ -156,22 +171,34 @@ Date: May 27 2024
         <!-- insert images with srcsets and sizes -->
         
         <a href="https://www.mozilla.org/en-US/firefox/new/">
-          <img>
+            <source media="(max-width: 499px)" srcset="firefox_logo-only_RGB.120px.png">
+            <source media="(min-width: 500px)" srcset="firefox_logo-only_RGB.400px.png">
+            <img src="index/firefox_logo-only_RGB.png" alt="The firefox logo">
         </a>
         <a href="https://www.mozilla.org/">
-          <img>
+            <source media="(max-width: 499px)" srcset="mozilla-dinosaur-head.120.png">
+            <source media="(min-width: 500px)" srcset="mozilla-dinosaur-head.120.png">
+            <img src="index/mozilla-dinosaur-head.png" alt="A dinosaur head">
         </a>
         <a href="https://addons.mozilla.org/">
-          <img>
+            <source media="(max-width: 499px)" srcset="firefox_addons.120.png">
+            <source media="(min-width: 500px)" srcset="firefox_addons.400px.png">
+            <img src="index/firefox-addons.jpg" alt="The firefox addons logo">
+    
         </a>
         <a href="https://developer.mozilla.org/en-US/">
-          <img>
+           <img src="index/mdn.svg" alt="The firefox logo">
         </a>
         <div class="clearfix"></div>
       </div>
 
       <div class="red-panda">
         <!-- insert picture element -->
+        <picture>
+          <source media="(max-width: 599px)" srcset="red-panda.600.png">
+          <source media="(min-width: 600px)" srcset="red-panda.1200.png">
+          <img src="index/red-panda.jpg" alt="a red panda">
+        </picture>
       </div>
 
     </main>

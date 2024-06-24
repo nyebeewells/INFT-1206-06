@@ -35,6 +35,6 @@ text-decoration: green;
 
 ul {
 background-color: #eee; 
-border: 5px, solid, purple; 
-padding: 5px;
+border-radius:5px; border-style:solid; border-color:purple; 
+padding-block: 5px;
 }

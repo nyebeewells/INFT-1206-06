@@ -50,3 +50,90 @@ border-bottom: 5px solid #a66;
 }
 
 /* WRITE YOUR CODE BELOW HERE */
+
+
+@font-face {
+font-family: 'caviar';
+src: url('../fonts/caviardreams-webfont.woff2') format('woff2'),
+        url('../fonts/caviardreams-webfont.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'newyorkregular';
+    src: url('../fonts/newyork_personal_use-webfont.woff2') format('woff2'),
+            url('../fonts/newyork_personal_use-webfont.woff') format('woff');
+    font-weight: normal; font-style: normal;
+
+}
+
+html {
+    font-size: 10px;
+}
+
+body,
+li { 
+    font-family: 'caviar', serif; font-size: 1rem; line-height: 2; letter-spacing: 0.15rem; word-spacing: 0.3rem;
+}
+
+h1,
+h2 {
+    font-family: 'newyorkregular', serif; font-size: 2rem;
+}
+
+header {
+    text-align: center; letter-spacing: 0.3rem;
+}
+
+h2+p {
+    text-indent: 20px;
+}
+
+a:link {
+    color: #a66;
+}
+
+a:visited {
+    color: #a66;
+}
+
+a:focus {
+    color: #a66; text-decoration: none; outline: none;
+}
+
+a:hover {
+    color: #a66; text-decoration: none;
+}
+
+a:active {
+    background-color: #a66; color: #fff; font-size: 1.50rem;
+}
+
+a[href^="https"] {
+    padding-right: 1.7rem;
+    background-image: url(https://mdn.github.io/learning-area/css/styling-text/typesetting-a-homepage-start/external-link-52.png);
+    background-size: 11px; background-repeat: no-repeat; background-position: top right;
+    }
+
+
+li {
+    list-style: square;
+}
+
+
+nav {
+    border-radius: 0.5rem; height: 800px; width: 200px; padding: 40px 0;
+}
+
+nav li {
+    list-style: none; line-height: 80px;
+}
+
+nav li {
+    line-height:5; list-style: none; text-align:center; border:2px solid pink; margin-bottom:1.5rem; text-decoration: none;
+}

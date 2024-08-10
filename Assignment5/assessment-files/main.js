@@ -8,7 +8,6 @@
 // Description:  accessibility trouble shooting
 // -->
 
-
 const showHideBtn = document.querySelector('.show-hide');
 const commentWrapper = document.querySelector('.comment-wrapper');
 
